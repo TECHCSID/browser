@@ -19,9 +19,14 @@ if($Sids){
             $BrowserName = Switch -wildcard ($Browser) 
             {
                 'ChromeHTML' {"Google Chrome" }
-                'IE.HTTP' { "Internet Explorer" }
+                'IE.HTTP' {"Internet Explorer" }
+		'IE.HTTPS' {"Internet Explorer Https" }
                 "*Firefox*" {"Mozilla FireFox" }
-                'MSEdgeHTM' { "Microsoft Edge" }
+                'MSEdgeHTM' {"Microsoft Edge Chromium" }
+		'OperaStable' {"Opera Software"}
+		'FirefoxURL-308046B0AF4A39CB' {"Mozilla Firefox"}
+		'AppXq0fevzme2pys62n3e0fbqa7peapykr8v' {"Microsoft Edge"}
+		'AppX90nv6nhay5n6a98fnetv7tpk64pp35es' {"Microsoft Edge Https"}
 		        Default { $Browser }
             }
         }
